@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430">
+<rect width="1200" height="430" fill="white"/>
+<style>.t{font-family:Arial,Helvetica,sans-serif;fill:#111827}.title{font-size:30px;font-weight:700}.sub{font-size:17px;fill:#4b5563}.box{fill:#f8fafc;stroke:#1f4e79;stroke-width:2}.b2{fill:#f8fafc;stroke:#3f7d4e;stroke-width:2}.h{font-size:20px;font-weight:700}.s{font-size:16px;fill:#4b5563}.arrow{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+<text x="55" y="55" class="t title">Measurement and analysis chain</text>
+<text x="55" y="87" class="t sub">Controlled illumination, fast readout and position-resolved response reconstruction</text>
+<rect x="55" y="145" rx="14" ry="14" width="170" height="110" class="box"/><text x="140" y="184" text-anchor="middle" class="t h">PiLAS laser</text><text x="140" y="214" text-anchor="middle" class="t s">pulsed illumination</text>
+<rect x="275" y="145" rx="14" ry="14" width="170" height="110" class="b2"/><text x="360" y="184" text-anchor="middle" class="t h">X–Y stages</text><text x="360" y="214" text-anchor="middle" class="t s">known scan position</text>
+<rect x="495" y="145" rx="14" ry="14" width="170" height="110" class="box"/><text x="580" y="184" text-anchor="middle" class="t h">LAPPD / HRPPD</text><text x="580" y="214" text-anchor="middle" class="t s">detector response</text>
+<rect x="715" y="145" rx="14" ry="14" width="170" height="110" class="box"/><text x="800" y="184" text-anchor="middle" class="t h">FastIC + picoTDC</text><text x="800" y="214" text-anchor="middle" class="t s">pulse / timing readout</text>
+<rect x="935" y="145" rx="14" ry="14" width="170" height="110" class="box"/><text x="1020" y="184" text-anchor="middle" class="t h">MuDAQ + ROOT</text><text x="1020" y="214" text-anchor="middle" class="t s">triggered acquisition</text>
+<line x1="225" y1="200" x2="270" y2="200" class="arrow"/><line x1="445" y1="200" x2="490" y2="200" class="arrow"/><line x1="665" y1="200" x2="710" y2="200" class="arrow"/><line x1="885" y1="200" x2="930" y2="200" class="arrow"/>
+<rect x="275" y="310" rx="14" ry="14" width="610" height="72" class="b2"/><text x="580" y="340" text-anchor="middle" class="t h">Position-dependent observables</text><text x="580" y="366" text-anchor="middle" class="t s">hit count · ToA · ToT · occupancy · fitted spatial response</text>
+<line x1="580" y1="255" x2="580" y2="305" class="arrow"/>
+</svg>
