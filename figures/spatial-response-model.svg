@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<rect width="1100" height="520" fill="white"/>
+<style>.t{font-family:Arial,Helvetica,sans-serif;fill:#111827}.title{font-size:30px;font-weight:700}.sub{font-size:17px;fill:#4b5563}.box{fill:#f8fafc;stroke:#cbd5e1;stroke-width:2}.h{font-size:21px;font-weight:700}.s{font-size:16px;fill:#4b5563}.op{font-size:34px;font-weight:700;fill:#475569}.eq{font-size:22px;font-weight:700;fill:#1f4e79}</style>
+<text x="60" y="55" class="t title">Spatial-response model</text>
+<text x="60" y="86" class="t sub">Known finite-width terms are separated from the remaining effective broadening</text>
+<rect x="60" y="145" width="220" height="155" rx="14" class="box"/>
+<text x="170" y="188" text-anchor="middle" class="t h">Readout element</text><text x="170" y="220" text-anchor="middle" class="t s">finite top-hat width</text>
+<rect x="95" y="245" width="150" height="35" fill="#1f4e79"/>
+<text x="305" y="235" class="t op">⊗</text>
+<rect x="355" y="145" width="220" height="155" rx="14" class="box"/>
+<text x="465" y="188" text-anchor="middle" class="t h">Measured laser</text><text x="465" y="220" text-anchor="middle" class="t s">finite illumination width</text>
+<rect x="405" y="245" width="120" height="35" fill="#6b8e23"/>
+<text x="600" y="235" class="t op">⊗</text>
+<rect x="650" y="145" width="220" height="155" rx="14" class="box"/>
+<text x="760" y="188" text-anchor="middle" class="t h">Gaussian term</text><text x="760" y="220" text-anchor="middle" class="t s">effective broadening σ_eff</text>
+<path d="M690 278 C720 278 725 235 760 235 C795 235 800 278 830 278" fill="none" stroke="#b33a3a" stroke-width="4"/>
+<text x="895" y="235" class="t op">→</text>
+<rect x="945" y="145" width="105" height="155" rx="14" class="box"/>
+<path d="M958 275 C970 275 972 210 998 210 C1025 210 1028 275 1040 275" fill="none" stroke="#1f4e79" stroke-width="4"/>
+<text x="997" y="188" text-anchor="middle" class="t h">Fit</text>
+<text x="60" y="375" class="t eq">R(x) = A · [T_readout ⊗ T_laser ⊗ G(σ_eff)] + B</text>
+<text x="60" y="420" class="t s">σ_eff is treated as an effective one-dimensional response parameter under the tested conditions.</text>
+<text x="60" y="450" class="t s">It is not identified directly with the intrinsic MCP electron-cloud width.</text>
+</svg>
