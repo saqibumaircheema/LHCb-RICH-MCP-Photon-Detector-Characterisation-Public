@@ -1,0 +1,17 @@
+# Keep raw/internal research material out of the public repository
+*.root
+*.zip
+*.tar
+*.tar.gz
+data/
+raw_data/
+private/
+internal/
+analysis/
+src/
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+__pycache__/
