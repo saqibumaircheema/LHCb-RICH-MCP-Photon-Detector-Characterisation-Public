@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
+<rect width="1000" height="480" fill="white"/>
+<style>.t{font-family:Arial,Helvetica,sans-serif;fill:#111827}.title{font-size:30px;font-weight:700}.sub{font-size:17px;fill:#4b5563}.bar{fill:#1f4e79}.bar2{fill:#6b8e23}.lab{font-size:18px}.big{font-size:24px;font-weight:700}.grid{stroke:#e5e7eb;stroke-width:1}.tick{font-size:14px;fill:#6b7280}</style>
+<text x="65" y="55" class="t title">Measured horizontal laser widths used as fit inputs</text>
+<text x="65" y="86" class="t sub">Independent CCD characterisation before detector-response interpretation</text>
+<line x1="250" y1="135" x2="250" y2="390" stroke="#111827" stroke-width="2"/>
+<line x1="250" y1="390" x2="900" y2="390" stroke="#111827" stroke-width="2"/>
+<line x1="350" y1="135" x2="350" y2="390" class="grid"/><line x1="450" y1="135" x2="450" y2="390" class="grid"/><line x1="550" y1="135" x2="550" y2="390" class="grid"/><line x1="650" y1="135" x2="650" y2="390" class="grid"/><line x1="750" y1="135" x2="750" y2="390" class="grid"/><line x1="850" y1="135" x2="850" y2="390" class="grid"/>
+<text x="75" y="208" class="t lab">Collimated beam</text><rect x="250" y="170" width="517" height="65" rx="6" class="bar"/><text x="785" y="212" class="t big">5.173 mm</text>
+<text x="75" y="323" class="t lab">Micro-focused beam</text><rect x="250" y="285" width="90" height="65" rx="6" class="bar2"/><text x="360" y="327" class="t big">0.900 mm</text>
+<text x="245" y="420" class="t tick">0</text><text x="345" y="420" class="t tick">1</text><text x="445" y="420" class="t tick">2</text><text x="545" y="420" class="t tick">3</text><text x="645" y="420" class="t tick">4</text><text x="745" y="420" class="t tick">5</text><text x="845" y="420" class="t tick">6 mm</text>
+</svg>
