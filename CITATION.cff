@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "MCP-Based Photon Detector Characterisation for the LHCb RICH Upgrade II"
+message: "If you use material from this research summary, please cite this repository and the associated MSc dissertation."
+type: software
+authors:
+  - family-names: "Umair"
+    given-names: "Saqib"
+year: 2026
+abstract: "Selected methodology and results from an MSc study of LAPPD and HRPPD spatial response using controlled laser position scans for the LHCb RICH Upgrade II."
