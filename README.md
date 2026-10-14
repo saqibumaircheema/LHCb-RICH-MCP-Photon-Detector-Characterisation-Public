@@ -1,104 +1,114 @@
-# MCP-Based Photon Detector Characterisation for the LHCb RICH Upgrade II
+# Characterisation of MCP-Based Photon Detectors for the LHCb RICH Upgrade II
 
-**Saqib Umair** · MSc Particle and Nuclear Physics · University of Edinburgh  
+**Saqib Umair**  
+MSc Particle and Nuclear Physics, University of Edinburgh  
 Supervisors: **Dr Silvia Gambetta** and **Dr Dan Foulds-Holt**  
 Dissertation submitted: **21 August 2026**
 
-This repository is a concise public record of my MSc detector-R&D project. I characterised the spatial response of a Gen-II Large Area Picosecond Photodetector (LAPPD) and a High-Rate Picosecond Photodetector (HRPPD) using controlled laser position scans, independent CCD measurements of the laser profile, and convolution-based response modelling.
+This repository presents selected results from my MSc research on the spatial response of microchannel-plate photon detectors for the LHCb RICH Upgrade II. I studied a Gen-II Large Area Picosecond Photodetector (LAPPD) and a High-Rate Picosecond Photodetector (HRPPD) using controlled laser position scans and independently measured laser profiles.
 
-> **Research question:** how do illumination width, readout geometry and operating conditions shape the measured spatial response of MCP-based photon detectors relevant to the LHCb RICH Upgrade II?
+The main question was:
 
-## Results at a glance
+> How do illumination width, readout geometry and detector operating conditions affect the measured spatial response?
 
-<p align="center">
-  <img src="figures/selected-results.svg" alt="Selected LAPPD and HRPPD spatial-response results" width="95%">
-</p>
+## Main results
 
 | Measurement | Result |
 |---|---:|
-| LAPPD, nominal bias | **σ_eff = 4.781 ± 0.025 mm** |
-| LAPPD, common gap bias 150 → 250 V | **4.541 ± 0.024 → 5.254 ± 0.026 mm** |
-| HRPPD, channel 52 | **σ_eff = 1.538 ± 0.003 mm** |
-| Focused-laser horizontal width used in LAPPD fit | **0.900 mm** |
-| Collimated-laser horizontal width used in HRPPD fit | **5.173 mm** |
+| LAPPD, nominal bias | **sigma_eff = 4.781 +/- 0.025 mm** |
+| LAPPD, common gap bias 150 V | **4.541 +/- 0.024 mm** |
+| LAPPD, common gap bias 200 V | **4.781 +/- 0.025 mm** |
+| LAPPD, common gap bias 250 V | **5.254 +/- 0.026 mm** |
+| HRPPD, channel 52 | **sigma_eff = 1.538 +/- 0.003 mm** |
 
-The LAPPD and HRPPD measurements were made with different illumination and readout configurations. The fitted values are therefore not presented as a direct ranking of intrinsic detector resolution.
+The LAPPD effective width increased by approximately **16%** between the 150 V and 250 V common-gap configurations.
 
-## Experimental and analysis workflow
+The LAPPD and HRPPD values were obtained with different illumination and readout configurations, so they are not presented as a direct ranking of intrinsic detector spatial resolution.
 
-<p align="center">
-  <img src="figures/measurement-workflow.svg" alt="Measurement and analysis chain" width="95%">
-</p>
+## Experimental method
 
-A pulsed PiLAS laser was translated across the fixed detector using motorised stages. FastIC front-end electronics and picoTDC timing readout were used with MuDAQ-based triggered acquisition. The principal observables were hit count, time of arrival (ToA), time over threshold (ToT) and occupancy.
+A pulsed PiLAS laser was translated across a stationary detector using motorised x-y stages. Detector signals were processed with FastIC front-end electronics and picoTDC timing readout, with MuDAQ used for triggered acquisition.
 
-The finite laser profile was measured independently with a CCD camera before interpreting the detector scans.
+The analysis used:
 
-<p align="center">
-  <img src="figures/laser-width-inputs.svg" alt="Measured horizontal laser widths used as analysis inputs" width="88%">
-</p>
+- hit count;
+- time of arrival (ToA);
+- time over threshold (ToT);
+- occupancy;
+- position-dependent response profiles.
+
+Before interpreting the detector scans, I measured the transverse laser profile independently with a CCD camera.
+
+For the principal analyses:
+
+- **LAPPD:** micro-focused horizontal laser width, **W_x = 0.900 mm**;
+- **HRPPD:** collimated horizontal laser width, **W_x = 5.173 mm**.
 
 ## Spatial-response model
 
-The measured scan width contains more than the detector response alone. I therefore treated the finite readout width and measured laser width explicitly and fitted an additional Gaussian broadening term.
+The measured scan profile contains contributions from the finite readout width, the finite laser width and additional broadening.
 
-<p align="center">
-  <img src="figures/spatial-response-model.svg" alt="Spatial-response convolution model" width="92%">
-</p>
+The analysis therefore used the schematic model
 
-The fitted **σ_eff** is an effective one-dimensional broadening parameter for the complete tested detector/readout configuration. It is not interpreted as a direct measurement of the intrinsic MCP electron-cloud width.
+**R(x) = T_readout(x) x T_laser(x) x G(x; sigma_eff)**
 
-## LAPPD bias study
+where the products denote convolution in position.
 
-For the LAPPD scans, the external pickup width was fixed at **2.9 mm** and the measured micro-focused horizontal laser width at **0.900 mm**.
+The fitted **sigma_eff** is treated as an effective one-dimensional response parameter for the complete tested configuration. It is not identified directly with the intrinsic MCP electron-cloud width.
 
-The common MCP1–MCP2 and MCP2–anode gap voltage was varied from 150 V to 250 V:
+## LAPPD bias dependence
 
-| Common gap voltage | σ_eff |
+For the LAPPD scans, the external pickup width was fixed at **2.9 mm** and the measured focused-laser width at **0.900 mm**.
+
+The MCP1-MCP2 and MCP2-anode gap voltages were changed together from 150 V to 250 V. The extracted values were:
+
+| Common gap voltage | sigma_eff |
 |---:|---:|
-| 150 V | 4.541 ± 0.024 mm |
-| 200 V | 4.781 ± 0.025 mm |
-| 250 V | 5.254 ± 0.026 mm |
+| 150 V | 4.541 +/- 0.024 mm |
+| 200 V | 4.781 +/- 0.025 mm |
+| 250 V | 5.254 +/- 0.026 mm |
 
-<p align="center">
-  <img src="figures/lappd-bias-dependence.svg" alt="LAPPD effective spatial broadening versus common gap bias" width="88%">
-</p>
+Because the two transport gaps were varied simultaneously, this measurement does not identify which individual gap is responsible for the observed trend.
 
-The fitted width increased by approximately **16%** from the low- to high-bias setting. Because the MCP1–MCP2 and MCP2–anode gaps were varied together, this result describes the complete tested bias configuration and does not isolate a single transport gap.
-
-The simple symmetric model also does not reproduce all shoulder and tail structure. I therefore use σ_eff as a comparative response parameter rather than as a complete microscopic description.
+The simple symmetric convolution also does not reproduce all shoulder and tail structure. The large chi2/ndf values are therefore reported as a limitation of the model rather than hidden.
 
 ## HRPPD spatial response
 
-For HRPPD channel 52, the fit included the **3.0 mm pixel width** and the independently measured **5.173 mm collimated-laser width**. The additional fitted broadening was:
+For HRPPD channel 52, the fit included the **3.0 mm pixel width** and the measured **5.173 mm collimated-laser width**.
 
-**σ_eff = 1.538 ± 0.003 mm**
+The additional fitted broadening was:
 
-As with the LAPPD result, this parameter describes the measured configuration and can include detector transport, readout, threshold and model-shape contributions.
+**sigma_eff = 1.538 +/- 0.003 mm**
+
+This result is interpreted as an effective response parameter under the tested conditions.
 
 ## My contribution
 
-I carried out the dissertation-level experimental analysis and software work, including:
+My dissertation work included:
 
 - laser-profile characterisation from CCD measurements;
 - motorised translation-stage control for position scans;
-- ROOT/C++ and Python analysis for detector scans;
+- ROOT/C++ and Python analysis of detector scans;
 - convolution-based spatial-response fitting;
 - LAPPD bias-dependence, occupancy and timing checks;
-- HRPPD position-response analysis and exploratory neighbouring-channel signal-sharing studies.
+- HRPPD position-response analysis;
+- exploratory neighbouring-channel signal-sharing studies.
 
-## Technical scope
+## Technical tools
 
-**Instrumentation:** MCP-based photon detectors, LAPPD, HRPPD, PiLAS laser, CCD beam profiling, motorised stages, FastIC, picoTDC, MuDAQ  
-**Analysis:** ROOT/C++, Python, NumPy, SciPy, Matplotlib, uproot, nonlinear fitting, convolution models, ToA/ToT, detector-response interpretation
+**Detector and DAQ:** LAPPD, HRPPD, PiLAS laser, CCD beam profiling, motorised stages, FastIC, picoTDC, MuDAQ  
+**Analysis:** ROOT/C++, Python, NumPy, SciPy, Matplotlib, uproot, nonlinear fitting, ToA/ToT analysis
 
-## Repository contents
+## Further information
 
-- [Methodology](docs/METHODOLOGY.md) — measurement strategy and response model
-- [Results and limitations](docs/RESULTS_AND_LIMITATIONS.md) — numerical results and fit limitations
-- [Data and attribution](docs/DATA_AND_ATTRIBUTION.md) — what is and is not distributed publicly
+- [Research summary](docs/PROJECT_SUMMARY.md)
+- [Methodology](docs/METHODOLOGY.md)
+- [Results and limitations](docs/RESULTS_AND_LIMITATIONS.md)
+- [Data and attribution](docs/DATA_AND_ATTRIBUTION.md)
 - [Citation metadata](CITATION.cff)
 
-## Data and code availability
+## Public repository scope
 
-Raw detector data, collaborator-provided decoding software, internal collaboration material and the working analysis source code are not distributed in this public repository. The public record is restricted to selected analysis outputs, methodology and results whose provenance is clear.
+The full dissertation is **not published in this repository**.
+
+Raw detector data, collaborator-provided decoding software, internal collaboration material and the working analysis source code are also not distributed publicly. The repository is limited to selected research outputs, methodology, results and figures suitable for public release.
