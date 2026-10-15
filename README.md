@@ -154,3 +154,9 @@ My dissertation work included:
 The full dissertation is **not published in this repository**.
 
 Raw detector data, collaborator-provided decoding software, internal collaboration material and the working analysis source code are also not distributed publicly. The repository is limited to selected research outputs, methodology, results and figures suitable for public release.
+
+---
+
+## Research portfolio
+
+This repository is part of my physics research and scientific-computing portfolio. See my [GitHub profile](https://github.com/saqibumaircheema) for related work in detector instrumentation, particle-physics analysis, simulation, statistical inference and scientific machine learning.
